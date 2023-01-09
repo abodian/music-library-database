@@ -14,10 +14,10 @@ describe Application do
     it "should return the list of albums" do
       response = get("/albums")
 
-      expected_response = "Doolittle, Surfer Rosa, Waterloo, Super Trouper, Bossanova, Lover, Folklore, I Put a Spell on You, Baltimore, Here Comes the Sun, Fodder on My Wings, Ring Ring"
-
       expect(response.status).to eq(200)
-      expect(response.body).to eq(expected_response)
+      expect(response.body).to include("<h1>Albums</h1>")
+      expect(response.body).to include("Title: Doolittle")
+      expect(response.body).to include("Title: Surfer Rosa")
     end
   end
 
@@ -64,6 +64,22 @@ describe Application do
       expect(response.status).to eq(200)
       expect(response.body).to include("Artist: Pixies")
       expect(response.body).to include("<h1> Doolittle </h1>")
+    end
+    
+    it 'returns 200 OK and relevant album information' do
+      response = get("/albums/2")
+
+      expect(response.status).to eq(200)
+      expect(response.body).to include("Artist: Pixies")
+      expect(response.body).to include("<h1> Surfer Rosa </h1>")
+    end
+
+    it 'returns 200 OK and relevant album information' do
+      response = get("/albums/3")
+
+      expect(response.status).to eq(200)
+      expect(response.body).to include("Artist: ABBA")
+      expect(response.body).to include("<h1> Waterloo </h1>")
     end
   end
 end
