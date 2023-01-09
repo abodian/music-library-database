@@ -21,7 +21,7 @@ describe Application do
     end
   end
 
-  context "POST /albums" do
+  context "post /albums" do
     it 'returns 200 OK' do
       response = post('/albums', 
         title: "Voyage", 
@@ -34,6 +34,26 @@ describe Application do
 
       response = get('/albums')
       expect(response.body).to include("Voyage")
+    end
+  end
+
+  context "get /artists" do
+    it 'returns 200 OK and list of artists' do
+      response = get("/artists")
+
+      expect(response.status).to eq(200)
+      expect(response.body).to eq("Pixies, ABBA, Taylor Swift, Nina Simone, Kiasmos")
+    end
+  end
+
+  context "post /artists" do
+    it 'returns 200 OK' do
+      response = post("/artists", name: "Wild Nothing", genre: "Indie")
+
+      expect(response.status).to eq(200)
+
+      response = get('/artists')
+      expect(response.body).to include("Wild Nothing")
     end
   end
 end
