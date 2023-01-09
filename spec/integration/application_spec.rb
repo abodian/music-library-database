@@ -14,7 +14,7 @@ describe Application do
     it "should return the list of albums" do
       response = get("/albums")
 
-      expected_response = "Surfer Rosa, Waterloo, Super Trouper, Bossanova, Lover, Folklore, I Put a Spell on You, Baltimore, Here Comes the Sun, Fodder on My Wings, Ring Ring"
+      expected_response = "Doolittle, Surfer Rosa, Waterloo, Super Trouper, Bossanova, Lover, Folklore, I Put a Spell on You, Baltimore, Here Comes the Sun, Fodder on My Wings, Ring Ring"
 
       expect(response.status).to eq(200)
       expect(response.body).to eq(expected_response)
@@ -54,6 +54,16 @@ describe Application do
 
       response = get('/artists')
       expect(response.body).to include("Wild Nothing")
+    end
+  end
+
+  context "GET /albums/:id" do
+    it 'returns 200 OK and relevant album information' do
+      response = get("/albums/1")
+
+      expect(response.status).to eq(200)
+      expect(response.body).to include("Artist: Pixies")
+      expect(response.body).to include("<h1> Doolittle </h1>")
     end
   end
 end
