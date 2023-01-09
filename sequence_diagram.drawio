@@ -1,0 +1,109 @@
+<mxfile host="65bd71144e">
+    <diagram id="2kDTHlu91iyQOctUllzF" name="Page-1">
+        <mxGraphModel dx="1864" dy="1241" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#CCCCCC" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;labelBackgroundColor=none;fillColor=#e3c800;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+                    <mxGeometry x="-82.96" y="302.97" width="530" height="144.07" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Client - Postman/Rspec&lt;br&gt;&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="152.04" y="370" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=10;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="80" y="110" as="sourcePoint"/>
+                        <mxPoint x="80" y="640" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="Time" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="360" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="endArrow=classic;html=1;fontSize=16;fontColor=#000000;strokeWidth=10;strokeColor=#000000;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="280" y="180.03" as="sourcePoint"/>
+                        <mxPoint x="486" y="180" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="" style="endArrow=classic;html=1;fontSize=16;fontColor=#000000;strokeWidth=10;strokeColor=#000000;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="486" y="605" as="sourcePoint"/>
+                        <mxPoint x="278" y="605" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="HTTP Request" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=16;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="288" y="138" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="HTTP Response" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=16;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="557" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="497" y="44" width="813" height="667" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="POST Request containing artist name and genre as body params" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=16;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="274" y="207" width="198" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Status '200' code" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=16;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="297" y="628" width="196" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=16;fontColor=#ffffff;fillColor=#CCFFFF;rotation=90;strokeColor=#006EAF;" parent="1" vertex="1">
+                    <mxGeometry x="396" y="307.75" width="451" height="127.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="s" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=16;fontColor=#ffffff;fillColor=#CCFFFF;rotation=90;strokeColor=#006EAF;" parent="1" vertex="1">
+                    <mxGeometry x="661" y="307.75" width="451" height="127.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=16;fontColor=#ffffff;fillColor=#CCFFFF;rotation=90;strokeColor=#006EAF;" parent="1" vertex="1">
+                    <mxGeometry x="1034.45" y="214.81" width="295.87" height="165.26" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Sinatra Application Class&lt;br&gt;&lt;br&gt;post /artists route" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=16;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="591.5" y="343" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="endArrow=classic;html=1;fontSize=16;fontColor=#000000;strokeWidth=10;strokeColor=#000000;exitX=0.153;exitY=0.011;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="16" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="701" y="219.02999999999997" as="sourcePoint"/>
+                        <mxPoint x="822" y="215" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="24" value="" style="endArrow=classic;html=1;fontSize=16;fontColor=#000000;strokeColor=#000000;strokeWidth=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="822.75" y="511.5" as="sourcePoint"/>
+                        <mxPoint x="685.25" y="511.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" value="Method call" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=16;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="716" y="231" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="Return value nil" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=16;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="722" y="537" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="Repository Class" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=16;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="861" y="369" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="" style="endArrow=classic;html=1;fontSize=16;fontColor=#000000;strokeColor=#000000;strokeWidth=10;entryX=0.361;entryY=1.008;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="19" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="960" y="257" as="sourcePoint"/>
+                        <mxPoint x="1010" y="207" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="30" value="SQL query: INSERT INTO artists" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=16;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="964" y="197" width="119" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="" style="endArrow=classic;html=1;fontSize=16;fontColor=#000000;strokeColor=#000000;strokeWidth=10;entryX=0.562;entryY=0.007;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.843;exitY=0.997;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="19" target="18" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1017" y="419" as="sourcePoint"/>
+                        <mxPoint x="1067" y="369" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="32" value="Result Set - empty" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=16;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="970" y="426.04" width="122" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="postgres database" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=16;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1112" y="286" width="151" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="ArtistRepository&lt;br&gt;&lt;br&gt;.create method" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="861" y="417.04" width="60" height="29.96" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
