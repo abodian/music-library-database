@@ -1,4 +1,4 @@
-# POST /albums Route Design Recipe
+# GET /artists/:id Route Design Recipe
 
 _Copy this design recipe template to test-drive a Sinatra route._
 
@@ -11,8 +11,8 @@ You'll need to include:
   * or body parameters (passed in the request body)
 
 HTTP Method: GET
-PATH: /artists
-Query params: none
+PATH: /artists/:id
+Query Params: :id
 
 ## 2. Design the Response
 
@@ -28,50 +28,61 @@ _Replace the below with your own design. Think of all the different possible res
 <html>
   <head></head>
   <body>
-    <h1>Artists</h1>
-    
-    <% @artists.each do |artist| %>
-      <div>
-      <%=artist.name%> <a href="/artists/<%=artist.id%>"Click here for more information</a>
-      </div>
-    <% end %>
+    <h1>Artist: <%= artist.name%></h1>
+    <p>
+      Genre: <%= artist.genre%>
+    </p>
   </body>
 </html>
-```
 
+<!-- Expected Response: 200 OK
+Pixies
+Genre: Rock
 
-```
-Expected Response: 200 OK
-Pixies - Click here for more information
-ABBA - Click here for more information
-Taylor Swift - Click here for more information
-Nina Simone - Click here for more information
 ```
 
 ## 3. Write Examples
 
 _Replace these with your own design._
 
+
 # Request:
 
-get /artists
+GET /artists/1
 
 # Expected response:
-
-Response for 200 OK
 ```html
 <html>
   <head></head>
   <body>
-    <h1>Artists</h1>
-    
-    <% @artists.each do |artist| %>
-      <div>
-      <%=Pixies%> <a href="/artists/<%=artist.id%>"Click here for more information</a>
-      </div>
-    <% end %>
+    <h1>Artist: Pixies</h1>
+    <p>
+      Genre: Rock
+    </p>
   </body>
 </html>
+
+GET /artists/2
+
+# Expected response:
+```html
+<html>
+  <head></head>
+  <body>
+    <h1>Artist: ABBA</h1>
+    <p>
+      Genre: Pop
+    </p>
+  </body>
+</html>
+
+<!-- Expected Response: 200 OK
+Artist: Pixies
+Genre: Rock
+
+<!-- Expected Response: 200 OK
+Artist: ABBA
+Genre: Pop
 ```
 
 ## 4. Encode as Tests Examples
@@ -87,17 +98,21 @@ describe Application do
 
   let(:app) { Application.new }
 
-  context "GET /artists" do
-    it 'returns 200 OK and list of artists with links for more information' do
-      response = get("/artists")
+  context "GET /artists/:id" do
+    it 'returns 200 OK and relevant album information' do
+      response = get("/artists/1")
 
       expect(response.status).to eq(200)
-      expect(response.body).to include("Pixies")
-      expect(response.body).to include("ABBA")
-      expect(response.body).to include("Taylor Swift")
-      expect(response.body).to include('<a href="/artists/1>"Click here for more information</a>')
-      expect(response.body).to include('<a href="/artists/2>"Click here for more information</a>')
-      expect(response.body).to include('<a href="/artists/3>"Click here for more information</a>')
+      expect(response.body).to include("Artist: Pixies")
+      expect(response.body).to include("Genre: Rock")
+    end
+
+    it 'returns 200 OK and relevant album information' do
+      response = get("/artists/2")
+
+      expect(response.status).to eq(200)
+      expect(response.body).to include("Artist: ABBA")
+      expect(response.body).to include("Genre: Pop")
     end
   end
 end

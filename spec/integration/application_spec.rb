@@ -18,6 +18,9 @@ describe Application do
       expect(response.body).to include("<h1>Albums</h1>")
       expect(response.body).to include("Title: Doolittle")
       expect(response.body).to include("Title: Surfer Rosa")
+      expect(response.body).to include('<a href="/albums/1">Link to album information</a>')
+      expect(response.body).to include('<a href="/albums/2">Link to album information</a>')
+      expect(response.body).to include('<a href="/albums/3">Link to album information</a>')
     end
   end
 
@@ -34,15 +37,6 @@ describe Application do
 
       response = get('/albums')
       expect(response.body).to include("Voyage")
-    end
-  end
-
-  context "get /artists" do
-    it 'returns 200 OK and list of artists' do
-      response = get("/artists")
-
-      expect(response.status).to eq(200)
-      expect(response.body).to eq("Pixies, ABBA, Taylor Swift, Nina Simone, Kiasmos")
     end
   end
 
@@ -80,6 +74,38 @@ describe Application do
       expect(response.status).to eq(200)
       expect(response.body).to include("Artist: ABBA")
       expect(response.body).to include("<h1> Waterloo </h1>")
+    end
+  end
+
+  context "GET /artists/:id" do
+    it 'returns 200 OK and relevant album information' do
+      response = get("/artists/1")
+
+      expect(response.status).to eq(200)
+      expect(response.body).to include("Artist: Pixies")
+      expect(response.body).to include("Genre: Rock")
+    end
+
+    it 'returns 200 OK and relevant album information' do
+      response = get("/artists/2")
+
+      expect(response.status).to eq(200)
+      expect(response.body).to include("Artist: ABBA")
+      expect(response.body).to include("Genre: Pop")
+    end
+  end
+
+  context "GET /artists" do
+    it 'returns 200 OK and list of artists with links for more information' do
+      response = get("/artists")
+
+      expect(response.status).to eq(200)
+      expect(response.body).to include("Pixies")
+      expect(response.body).to include("ABBA")
+      expect(response.body).to include("Taylor Swift")
+      expect(response.body).to include('<a href="/artists/1">Click here for more information</a>')
+      expect(response.body).to include('<a href="/artists/2">Click here for more information</a>')
+      expect(response.body).to include('<a href="/artists/3">Click here for more information</a>')
     end
   end
 end
