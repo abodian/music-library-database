@@ -98,7 +98,7 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="32" value="Result Set - artist id,&amp;nbsp; artist name, artist genre" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=16;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="970" y="433.04" width="122" height="30" as="geometry"/>
+                    <mxGeometry x="973" y="438.04" width="122" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="33" value="music_library_database" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=15;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="1124.3200000000002" y="285" width="118.12" height="30" as="geometry"/>
