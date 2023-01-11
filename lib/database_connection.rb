@@ -12,7 +12,7 @@ class DatabaseConnection
   # the database name given in argument.
   def self.connect
     if ENV['DATABASE_URL'] != nil
-      @connection = PG.connect(ENV['postgres://music_library_database_zd5l_user:UzyON1JJOJUa8EAUifsVZVDpGhHjp79e@dpg-cev9l9arrk0a2jp0939g-a.frankfurt-postgres.render.com/music_library_database_zd5l'])
+      @connection = PG.connect(ENV['postgres://music_library_database_zd5l_user:UzyON1JJOJUa8EAUifsVZVDpGhHjp79e@dpg-cev9l9arrk0a2jp0939g-a/music_library_database_zd5l'])
       return
     end
 
