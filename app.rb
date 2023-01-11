@@ -14,6 +14,10 @@ class Application < Sinatra::Base
     also_reload 'lib/artist_repository'
   end
 
+  get "/" do
+    return erb(:index)
+  end
+
   get "/albums" do
     repo = AlbumRepository.new
     @albums = repo.all
