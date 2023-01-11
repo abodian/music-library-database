@@ -22,7 +22,7 @@ class DatabaseConnection
   #     database_name = 'music_library'
   #   end
   #   @connection = PG.connect({ host: '127.0.0.1', dbname: database_name })
-  # end
+  end
 
   # This method executes an SQL query 
   # on the database, providing some optional parameters
