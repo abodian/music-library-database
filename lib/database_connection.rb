@@ -11,7 +11,7 @@ class DatabaseConnection
   # PG gem. We connect to 127.0.0.1, and select
   # the database name given in argument.
   def self.connect
-    if ENV['DATABASE_URL'] != nil
+    if ENV['postgres://music_library_database_zd5l_user:UzyON1JJOJUa8EAUifsVZVDpGhHjp79e@dpg-cev9l9arrk0a2jp0939g-a/music_library_database_zd5l'] != nil
       @connection = PG.connect(ENV['postgres://music_library_database_zd5l_user:UzyON1JJOJUa8EAUifsVZVDpGhHjp79e@dpg-cev9l9arrk0a2jp0939g-a/music_library_database_zd5l'])
       return
     end
@@ -27,12 +27,12 @@ class DatabaseConnection
   # This method executes an SQL query 
   # on the database, providing some optional parameters
   # (you will learn a bit later about when to provide these parameters).
-  # def self.exec_params(query, params)
-  #   if @connection.nil?
-  #     raise 'DatabaseConnection.exec_params: Cannot run a SQL query as the connection to'\
-  #     'the database was never opened. Did you make sure to call first the method '\
-  #     '`DatabaseConnection.connect` in your app.rb file (or in your tests spec_helper.rb)?'
-  #   end
-  #   @connection.exec_params(query, params)
-  # end
+  def self.exec_params(query, params)
+    if @connection.nil?
+      raise 'DatabaseConnection.exec_params: Cannot run a SQL query as the connection to'\
+      'the database was never opened. Did you make sure to call first the method '\
+      '`DatabaseConnection.connect` in your app.rb file (or in your tests spec_helper.rb)?'
+    end
+    @connection.exec_params(query, params)
+  end
 end
